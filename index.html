@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>データが導く人気ラーメン店への最適解</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: 24px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 5px;
+        }
+        .author {
+            text-align: right;
+            font-size: 16px;
+            font-weight: bold;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #2980b9;
+            font-size: 20px;
+            margin-top: 40px;
+            border-left: 5px solid #3498db;
+            padding-left: 15px;
+        }
+        h3 {
+            color: #34495e;
+            font-size: 18px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        .summary {
+            background-color: #e8f4f8;
+            padding: 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        .chart-img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            color: #333;
+        }
+        .highlight-red { color: #e74c3c; font-weight: bold; }
+        .highlight-blue { color: #3498db; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>データが導く人気ラーメン店への最適解<br><small>〜飲食店口コミデータの統計分析と出店戦略提案〜</small></h1>
+        
+        <!-- 作成者名の追加 -->
+        <div class="author">作成者：岡本 花奈</div>
+        
+        <div class="summary">
+            【エグゼクティブ・サマリー】<br>
+            1,200件の都内近郊ラーメン店データ分析から、従来の「郊外・広々とした店舗」という固定観念が、必ずしも高評価や集客に結びつかないことが判明しました。本レポートでは、限られた経営資源をどこに集中させ、どこを削るべきか、データに基づき明確に提言します。
+        </div>
+
+        <h2>1. 認知の壁を突破するマーケティング投資</h2>
+        <h3>事実：保存数と来店の強力な相関関係（r = 0.89）</h3>
+        <p><strong>【分析結果】</strong><br>
+        店舗の「保存数（ユーザーの関心度）」と「コメント数（実際の来店・レビュー）」には、極めて強い正の相関が確認されました。</p>
+        
+        <!-- 散布図画像の埋め込み部分 -->
+        <img src="scatter.png" alt="コメント数と保存数の散布図" class="chart-img">
+
+        <p><strong>【出店時の注力ポイント（投資すべき点）】</strong><br>
+        ユーザーに「行きたい（保存）」と思わせる施策が、ダイレクトに集客へ直結します。<br>
+        ・内装やメニュー開発においては<strong>「SNSでの拡散性（シズル感）」</strong>に予算を割くべきです。<br>
+        ・オープン初期は、インフルエンサー等を活用した認知拡大（保存数の獲得）にマーケティング予算を集中投資することを推奨します。</p>
+
+        <h2>2. 立地選定における「駐車場神話」からの脱却</h2>
+        <h3>事実：駐車場は高評価の必須条件ではない</h3>
+        <p><strong>【分析結果（t検定）】</strong><br>
+        「駐車場がある方が遠方から集客でき評価が高い」という仮説を検証した結果、有意差（p値 = 0.0025）は認められたものの、<strong>駐車場「無」の店舗（3.65）の方が、「有」の店舗（3.62）よりも評価が高い</strong>結果となりました。</p>
+        <p><strong>【出店時の注力ポイント（投資すべきでない点）】</strong><br>
+        遠方からの集客を狙い、駐車場付きの郊外物件に高いコストを払う必要はありません。むしろ、車がなくてもアクセスしやすい<strong>「駅周辺や都市部などの競争環境が激しいエリア」</strong>に出店し、ラーメンのクオリティで勝負することが高評価店への近道となります。</p>
+
+        <h2>3. 空間設計と設備投資の最適化</h2>
+        <h3>事実：個室は不要。本来の強みに特化する</h3>
+        <p><strong>【分析結果（重回帰分析）】</strong><br>
+        保存数を目的変数とした重回帰分析（決定係数 R² = 0.814）の結果、「個室の有無」は保存数に対して<strong>統計的に有意なマイナスの影響（p値 = 0.0005）</strong>を与えていることが判明しました。個室がある店舗は、ない店舗と比較して保存数が約2,800件少なくなる傾向があります。</p>
+        <p><strong>【出店時の注力ポイント（投資すべきでない点）】</strong><br>
+        ラーメンという「短時間で消費する」食事体験において、個室の設置はユーザーニーズに合致せず、話題性を低下させる要因になります。個室を作るための設備投資は<strong>全額カット</strong>すべきです。</p>
+
+        <h2>4. 総括・アクションプラン</h2>
+        <h3>新規出店に向けたリソース配分マトリクス</h3>
+        <p>ここまでの分析結果を基に、経営資源の投資優先度を以下のように提案します。</p>
+        <table>
+            <tr>
+                <th>項目</th>
+                <th>投資判断</th>
+                <th>理由（エビデンス）</th>
+            </tr>
+            <tr>
+                <td><strong>SNS・PR施策</strong></td>
+                <td class="highlight-blue">積極投資</td>
+                <td>保存数が来店（コメント数）を強力に牽引するため</td>
+            </tr>
+            <tr>
+                <td><strong>都市部・駅前立地</strong></td>
+                <td class="highlight-blue">積極投資</td>
+                <td>駐車場なし物件の方が評価が高く、アクセス重視の層が多いため</td>
+            </tr>
+            <tr>
+                <td><strong>カウンター席</strong></td>
+                <td class="highlight-blue">積極投資</td>
+                <td>回転率と収益性を極大化するため</td>
+            </tr>
+            <tr>
+                <td><strong>駐車場スペース</strong></td>
+                <td class="highlight-red">コスト削減</td>
+                <td>評価向上に寄与しないどころか、マイナス要因の傾向があるため</td>
+            </tr>
+            <tr>
+                <td><strong>個室の設置</strong></td>
+                <td class="highlight-red">完全排除</td>
+                <td>保存数に対し約2,800件のマイナス効果（有意）があるため</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
